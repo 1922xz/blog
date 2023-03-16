@@ -1,0 +1,10 @@
+.icon-fasong:before {
+    content: "\e642";
+}
+.icon-fasongActive:before {
+    content: "\e643";
+    color: skyblue;
+}
+.icon-emoji:before{
+    content:"\e6f6"
+}
