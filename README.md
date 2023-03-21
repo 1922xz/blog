@@ -5,3 +5,13 @@
 ### 技术栈
 #### 前端主要运用Vue，Vuetify，element-ui，echarts，markdown-it等技术
 #### 后端主要采用了Express，MySql等技术
+### 项目运行说明
+先运行后台项目，再运行前台项目
+#### 后台
+``cd .\blog_server\``
+
+``npm init`` 
+
+``npm install``
+
+``node app.js``
