@@ -19,5 +19,9 @@ const router = new VueRouter({
     mode: "history",
     routes
 })
+router.$addRoutes = (params) => {
+    router.matcher = new VueRouter({ mode: 'history' }).matcher
+    router.addRoutes(params)
+}
 
 export default router

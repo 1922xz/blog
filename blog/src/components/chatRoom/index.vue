@@ -60,7 +60,7 @@
         />
         <!-- 表情 -->
         <i
-          class="iconfont icon-emoji"
+          class="mdi mdi-emoticon-happy-outline"
           style="font-size: 1.5rem"
           :style="isEmoji ? 'color:#FFC83D' : ''"
           @click="openEmoji"
@@ -73,9 +73,10 @@
     <div class="chat-btn" @click="open">
       <span class="unread" v-if="peopleCount > 0">{{ peopleCount }}</span>
       <img
+      style="border-radius:50%"
         width="100%"
         height="100%"
-        src=""
+        src="~@/assets/img/chat.jpg"
       />
     </div>
   </div>
@@ -172,8 +173,8 @@ export default {
   computed: {
     isInput() {
       return this.content
-        ? "iconfont icon-fasongActive"
-        : "iconfont icon-fasong";
+        ? "mdi mdi-sende"
+        : "mdi mdi-send";
     },
     isMyMessage() {
       return (item) => {

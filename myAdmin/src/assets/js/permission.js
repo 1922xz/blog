@@ -1,6 +1,8 @@
 import router from '@/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import store from '@/store'
+import {generaMenu} from './menu'
 NProgress.configure({
     easing: 'ease', // 动画方式
     speed: 500, // 递增进度条的速度
@@ -8,26 +10,22 @@ NProgress.configure({
     trickleSpeed: 200, // 自动递增间隔
     minimum: 0.3 // 初始化时的最小百分比
 })
-
 router.beforeEach((to, from, next) => {
     NProgress.start()
     let token = localStorage.getItem('token')
+    // console.log(token)
     if (to.path !== '/login') {
-        console.log(1);
         if (token) {
-            console.log('有token');
-            // generaMenu()
-            console.log('fangxing');
-            next()
+            if (store.state.userMenuList.length){
+                next()
+            }else{
+                generaMenu(() => { next({ ...to, replace: true }) })
+            }
         } else {
-            console.log('去登陆');
             next(`/login?redirect=${to.path}`)
         }
     } else {
-        console.log(2);
         if (token) {
-            
-            
             next('/')
         } else {
             next()
