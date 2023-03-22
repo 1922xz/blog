@@ -1,9 +1,7 @@
 <template>
   <v-dialog v-model="emailFlag" :fullscreen="isMobile" max-width="460">
     <v-card class="login-container" style="border-radius:4px">
-      <v-icon class="float-right" @click="emailFlag = false">
-        mdi-close
-      </v-icon>
+      <i class="float-right iconfont icon-close" @click="emailFlag=false"/>
       <div class="login-wrapper">
         <!-- 用户名 -->
         <v-text-field

@@ -1,13 +1,43 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-
-Vue.use(Vuetify)
-
-const opts = {
-    icons: {
-        iconfont: "mdi" // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
-    }
+import Vuetify, {
+    VCard,
+    VApp,
+    VAppBar,
+    VSnackbar,
+    VPagination,
+    VImg,
+    VDialog,
+    VCol,
+    VRow,
+    VAvatar,
+    VMain,
+    VTimeline,
+    VBtn,
+    VTextField,
+    VTimelineItem,
+    VIcon
 }
+    from 'vuetify/lib'
+Vue.use(Vuetify, {
+    components: {
+        VCard,
+        VApp,
+        VAppBar,
+        VSnackbar,
+        VPagination,
+        VImg,
+        VDialog,
+        VCol,
+        VRow,
+        VAvatar,
+        VMain,
+        VTimeline,
+        VBtn,
+        VTextField,
+        VTimelineItem,
+        VIcon
+    }
+})
+const opts = {}
 
 export default new Vuetify(opts)

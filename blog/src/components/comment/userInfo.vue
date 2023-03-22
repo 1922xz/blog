@@ -10,9 +10,7 @@
         <a v-else :href="item.webSite" target="_blank">
           {{ item.nickname }}
         </a>
-        <v-icon size="20" color="#ffa51e" v-if="item.userId == 1">
-          mdi-check-decagram
-        </v-icon>
+        <i color="#ffa51e" v-if="item.userId == 1">mdi-check-decagram</i>
       </div>
       <!-- 信息 -->
       <div class="comment-info">
@@ -21,13 +19,7 @@
           {{ item.createTime | date }}
         </span>
         <!-- 点赞 -->
-        <v-icon
-          size="16"
-          class="like iconfont icondianzan'"
-          @click="like(item)"
-        >
-          mdi-thumb-up
-        </v-icon>
+        <i class="iconfont icon-thumb" @click="like(item)"/>
         <span v-show="item.likeCount > 0"> {{ item.likeCount }}</span>
         <!-- 回复 -->
         <span class="reply-btn" @click="replyComment(item)"> 回复 </span>

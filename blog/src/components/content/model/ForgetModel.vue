@@ -1,9 +1,7 @@
 <template>
   <v-dialog v-model="forgetFlag" max-width="460">
     <v-card class="login-container" style="border-radius: 4px">
-      <v-icon class="float-right" @click="forgetFlag = false">
-        mdi-close
-      </v-icon>
+      <i class="float-right iconfont icon-close" @click="forgetFlag = false"/>
       <div class="login-wrapper">
         <!-- 用户名 -->
         <v-text-field
@@ -33,7 +31,7 @@
           label="密码"
           placeholder="请输入您的密码"
           @keyup.enter="forget"
-          :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+          :append-icon="show ? 'iconfont icon-eye' : 'iconfont icon-eye_off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
         />

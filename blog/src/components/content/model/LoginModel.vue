@@ -1,9 +1,7 @@
 <template>
   <v-dialog v-model="loginFlag" max-width="460">
     <v-card class="login-container">
-      <v-icon class="float-right" @click="loginFlag = false"  :dark="isDark">
-        mdi-close
-      </v-icon>
+      <i class="float-right iconfont icon-close" @click="loginFlag = false"  :dark="isDark"/>
       <div class="login-wrapper">
         <!-- 用户名 -->
         <v-text-field
@@ -22,7 +20,7 @@
           label="密码"
           placeholder="请输入您的密码"
           @keyup.enter="login"
-          :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+          :append-icon="show ? 'iconfont icon-eye' : 'iconfont icon-eye_off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
         />
@@ -43,8 +41,8 @@
         </div>
         <div class="other">
           <span>其他登陆</span>
-          <i href="" class="mdi mdi-qqchat" @click="qqLogin"/>
-          <i href="" class="mdi mdi-wechat"/>
+          <i href="" class="iconfont icon-qq" @click="qqLogin"/>
+          <i href="" class="iconfont icon-wechat"/>
         </div>
       </div>
     </v-card>
@@ -151,7 +149,7 @@ export default {
   position: absolute;
   bottom: 20px;
   left: 40px;
-   .mdi::before{
+   .iconfont::before{
     font-size: 25px;
     margin-left: 6px;
    }

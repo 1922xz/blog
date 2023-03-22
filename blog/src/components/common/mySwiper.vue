@@ -2,7 +2,7 @@
     <ul class="imglist">
       <li class="item" 
       v-for="(img, index) in imglist" :key="index" 
-      :style="{backgroundImage: 'url(' + img + ')'}">
+      :style="{backgroundImage:'url('+img+')'}">
       </li>
     </ul>
 </template>
@@ -20,7 +20,8 @@ export default {
 </script>
 <style scoped >
 .imglist {
-  z-index: -1;
+  will-change:auto;
+  z-index: -90;
   position: relative;
 }
 @keyframes imageAnimation {
@@ -54,9 +55,10 @@ export default {
   }
 }
 [data-theme=dark]:root .item{
-  filter: brightness(46%);
+  /* filter: brightness(46%); */
 }
 .item {
+  z-index: 9999;
   filter: brightness(90%);
   width: 100%;
   height: 100%;
@@ -67,9 +69,9 @@ export default {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   opacity: 0;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   animation: imageAnimation 36s linear infinite 0s;
-  transform-style: preserve-3d;
+  /* transform-style: preserve-3d; */
 }
 .item:nth-child(2) {
   animation-delay: 6s;

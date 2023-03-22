@@ -1,6 +1,5 @@
 <template>
   <div>
-    <banner title="关于我" :cover="cover"/>
     <!-- 关于我内容 -->
     <v-card class="blog-container">
       <!-- 博主头像 -->
@@ -21,10 +20,8 @@
 
 <script>
 import { markdownToHtml } from "@/utils/markdown.js";
-import banner from "@/components/content/banner";
 // import {mapGetters} from 'vuex'
 export default {
-  components: {banner},
   mounted() {
     this.getAboutContent();
     this.getCover()

@@ -12,7 +12,7 @@
           <div>聊天室</div>
           <div style="font-size: 12px">当前{{ peopleCount }}人在线</div>
         </div>
-        <v-icon class="close" @click="isShow = false">mdi-close</v-icon>
+        <i class="close iconfont icon-close" @click="isShow = false"/>
       </div>
       <!-- 对话内容 -->
 
@@ -49,8 +49,6 @@
         <div class="emoji-box" v-show="isEmoji">
           <emoji @addEmoji="addEmoji" :chooseEmoji="true" />
         </div>
-        <!-- 切换输入方式 -->
-        <v-icon style="margin-right: 8px"> mdi-microphone </v-icon>
         <!-- 文字输入 -->
         <edit
           placeholder="请输入内容"
@@ -60,7 +58,7 @@
         />
         <!-- 表情 -->
         <i
-          class="mdi mdi-emoticon-happy-outline"
+          class="iconfont icon-emoji"
           style="font-size: 1.5rem"
           :style="isEmoji ? 'color:#FFC83D' : ''"
           @click="openEmoji"
@@ -173,8 +171,8 @@ export default {
   computed: {
     isInput() {
       return this.content
-        ? "mdi mdi-sende"
-        : "mdi mdi-send";
+        ? "iconfont icon-fasong"
+        : "iconfont icon-fasongActive";
     },
     isMyMessage() {
       return (item) => {

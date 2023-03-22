@@ -8,7 +8,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -17,7 +17,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -26,7 +26,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -35,7 +35,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -44,7 +44,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -53,7 +53,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -62,7 +62,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -71,7 +71,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -80,7 +80,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -89,7 +89,7 @@
               <div class="right">
                 <div class="type">
                   <a href="">计算机科学</a
-                  ><span class="mdi mdi-chevron-right" /><a href="">数据结构</a>
+                  ><span class="" /><a href="">数据结构</a>
                 </div>
                 <div class="article">红黑树代码实现</div>
               </div>
@@ -206,16 +206,15 @@
         <v-col cols="8" offset-md="1" class="footWrapper">
           <div class="copyright">
             <span class="time">© 2010 – 2023</span
-            ><span class="mdi mdi-clover love" /><span class="creater"
+            ><span class="iconfont icon-clover love" /><span class="creater"
               >Ruri Shimotsuki @ Yume Shoka</span
             >
           </div>
           <div class="count">
-            <span class="mdi mdi-chart-bell-curve-cumulative" /><span
+            <span class="iconfont icon-chart-bar" /><span
               class="count"
               >2.4m字</span
             ><span class="divide" /><span
-              class="mdi mdi-pot-steam-outline"
             /><span>36:35</span>
           </div>
           <div class="powed"><span>基于 Hexo & Theme.Shoka</span></div>

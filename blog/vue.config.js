@@ -2,6 +2,8 @@ const path = require('path')
 // const resolve = dir => path.join(__dirname, dir)
 const SkeletonWebpackPlugin = require("vue-skeleton-webpack-plugin");
 module.exports = {
+  publicPath: './',
+  productionSourceMap: false,
   devServer: {
     proxy: {
       "/api": {
@@ -35,7 +37,6 @@ module.exports = {
         // },
       })
     );
-
     config.plugins = [...config.plugins, ...plugins];
   },
   // css 样式分离

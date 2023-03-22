@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- banner -->
-    <banner :title="photoAlbumName" :cover="photoAlbumCover" />
     <!-- 相册列表 -->
     <v-card class="blog-container">
       <div class="photo-wrap">
@@ -23,7 +21,6 @@
 
 <script>
 import { getPhotos } from "@/api/album.js";
-import banner from "@/components/content/banner";
 export default {
   data() {
     return {
@@ -62,7 +59,6 @@ export default {
     },
   },
   components: {
-    banner,
   },
 };
 </script>

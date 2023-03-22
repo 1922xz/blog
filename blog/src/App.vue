@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <TopNavBar />
+    <!-- <TopNavBar /> -->
     <v-main style="padding: 80 0 0 0">
       <mainContainer/>
     </v-main>
@@ -19,8 +19,7 @@
 
 <script>
 import mainContainer from '@/components/layout/mainContainer'
-// import Footer from "@/components/layout/Footer";
-import TopNavBar from "@/components/layout/TopNavBar";
+// import TopNavBar from "@/components/layout/TopNavBar";
 import LoginModel from "@/components/content/model/LoginModel.vue";
 import register from "@/components/content/model/RegisterModel.vue";
 import forget from "@/components/content/model/ForgetModel.vue";
@@ -31,7 +30,7 @@ export default {
   name: "App",
   components: {
     mainContainer,
-    TopNavBar,
+    // TopNavBar,
     LoginModel,
     register,
     forget,
@@ -56,7 +55,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@use "sass:list";
+@use "sass:math";
 .v-main__wrap .row{
   margin: 0;
 }

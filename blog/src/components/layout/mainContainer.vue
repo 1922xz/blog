@@ -1,5 +1,6 @@
 <template>
   <div style="width: 100%">
+    
     <div class="home-banner">
       <mySwiper :imglist="imglist" />
     </div>
@@ -76,12 +77,12 @@ export default {
     return {
       pagination: "",
       imglist: [
-        "https://tva3.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg",
-        "https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg",
-        "https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg",
-        "https://tva3.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg",
-        "https://tva3.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg",
-        "https://tva3.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg",
+        require("../../assets/img/swiper/1.jpg"),
+        require("../../assets/img/swiper/2.jpg"),
+        // require("../../assets/img/swiper/3.jpg"),
+        // require("../../assets/img/swiper/4.jpg"),
+        // require("../../assets/img/swiper/5.jpg"),
+        // require("../../assets/img/swiper/6.jpg"),
       ],
       articleList: [],
 
@@ -206,7 +207,6 @@ export default {
   }
 }
 .home-banner {
-  position: relative;
 }
 .home-container-bg {
   margin: 45vh auto 0px;
