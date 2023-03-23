@@ -3,8 +3,7 @@ import App from './App'
 import router from './router'
 import vuetify from '@/plugins/vuetify'
 
-
-// import animated from "animate.css";
+import animated from "animate.css";
 import '@/assets/css/index.css'
 import '@/assets/css/theme.css'
 import '@/assets/css/AlibabaFont/iconfont1.css'
@@ -22,7 +21,7 @@ import "vue-image-swipe/dist/vue-image-swipe.css";
 import toast from '@/components/toast/index.js'
 import { vueBaberrage } from "vue-baberrage";
 Vue.config.productionTip = false
-// Vue.use(animated)
+Vue.use(animated)
 Vue.use(VueAxios, axios)
 Vue.use(InfiniteLoading)
 Vue.use(VueImageSwipe);

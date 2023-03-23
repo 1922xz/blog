@@ -24,9 +24,8 @@ export default {
     right: 0;
     bottom: 0;
     z-index: 9999;
-}
-
-#loading {
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: #fdfdfd;
     display: flex;
     justify-content: center;

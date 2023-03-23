@@ -40,8 +40,7 @@
         <div class="article-info">
           <!-- 是否置顶 -->
           <span v-if="item.isTop === 1" style="color: #ff7242">
-            <v-icon size="14" color="#ff7242">mdi-arrow-collapse-up</v-icon>
-            置顶
+            <i color="#ff7242" class="iconfont icon-zhiding"/>置顶
           </span>
           <span>
             <v-icon size="14">mdi-calendar-month-outline</v-icon
@@ -193,7 +192,7 @@ export default {
     position: relative;
     width: 50%;
     display: table-cell;
-    background-image: url("~@/assets/img/divideLine.png");
+    background-image: url("/static/img/divideLine.png");
     background-repeat: no-repeat;
     content: "";
   }

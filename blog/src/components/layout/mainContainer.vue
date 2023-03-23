@@ -79,10 +79,10 @@ export default {
       imglist: [
         require("../../assets/img/swiper/1.jpg"),
         require("../../assets/img/swiper/2.jpg"),
-        // require("../../assets/img/swiper/3.jpg"),
-        // require("../../assets/img/swiper/4.jpg"),
-        // require("../../assets/img/swiper/5.jpg"),
-        // require("../../assets/img/swiper/6.jpg"),
+        require("../../assets/img/swiper/3.jpg"),
+        require("../../assets/img/swiper/4.jpg"),
+        require("../../assets/img/swiper/5.jpg"),
+        require("../../assets/img/swiper/6.jpg"),
       ],
       articleList: [],
 

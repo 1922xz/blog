@@ -1,5 +1,6 @@
 <template>
   <v-app id="app">
+    
     <!-- <TopNavBar /> -->
     <v-main style="padding: 80 0 0 0">
       <mainContainer/>
@@ -46,7 +47,7 @@ export default {
     getBlogInfo() {
       getWebsiteConfig().then((res) => {
         if (res) {
-          console.log(res);
+          // console.log(res);
           this.$store.commit("checkBlogInfo", res);
         }
       });

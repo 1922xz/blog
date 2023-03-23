@@ -2,7 +2,7 @@ const path = require('path')
 // const resolve = dir => path.join(__dirname, dir)
 const SkeletonWebpackPlugin = require("vue-skeleton-webpack-plugin");
 module.exports = {
-  publicPath: './',
+  publicPath: process.env.NODE_EVN==="production"?'./':'/',
   productionSourceMap: false,
   devServer: {
     proxy: {
@@ -29,12 +29,6 @@ module.exports = {
         },
         minimize: true, // SPA 下是否需要压缩注入 HTML 的 JS 代码
         quiet: true, // 在服务端渲染时是否需要输出信息到控制台
-        // router: {
-        //     mode: "history", // 路由模式
-        //     routes: [ // 对应路径所需要的骨架屏组件id，id的定义在入口文件内
-        //         { path: "/", skeletonId: "detailSkeleton" },
-        //     ],
-        // },
       })
     );
     config.plugins = [...config.plugins, ...plugins];
