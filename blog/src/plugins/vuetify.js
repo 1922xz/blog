@@ -9,7 +9,7 @@ import Vuetify, {VCard,VApp,VAppBar,VSnackbar,VPagination,VImg,
     VBtn,
     VTextField,
     VTimelineItem,
-    VIcon
+
 }
     from 'vuetify/lib'
 Vue.use(Vuetify, {
@@ -20,7 +20,6 @@ Vue.use(Vuetify, {
         VBtn,
         VTextField,
         VTimelineItem,
-        VIcon
     }
 })
 const opts = {}

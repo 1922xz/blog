@@ -27,7 +27,7 @@
           {{ websiteAuthor }}
         </router-link>
         <span
-          class="mdi"
+          class="iconfont"
           :class="themeClass"
           style="
             font-size: 28px;
@@ -41,48 +41,48 @@
       <div class="nav-title float-right">
         <div class="menus-item">
           <a class="menu-btn" @click="openSearch">
-            <i class="mdi mdi-magnify" />搜索
+            <i class="iconfont icon-search" />搜索
           </a>
         </div>
         <div class="menus-item">
           <router-link class="menu-btn" to="/">
-            <i class="mdi mdi-home" />首页
+            <i class="iconfont icon-home" />首页
           </router-link>
         </div>
         <div class="menus-item">
           <a class="menu-btn">
-            <i class="mdi mdi-find-replace" />发现<i
-              class="mdi mdi-chevron-up"
+            <i class="iconfont icon-faxian" />发现<i
+              class="iconfont icon-expand"
             />
           </a>
           <ul class="menus-submenu">
             <li class="first">
               <router-link to="/archives">
-                <i class="mdi mdi-file-table-box-outline" />归档
+                <i class="iconfont icon-guidang" />归档
               </router-link>
             </li>
             <li>
               <router-link to="/categories">
-                <i class="mdi mdi-format-list-bulleted-type" /> 分类
+                <i class="iconfont icon-fenlei" /> 分类
               </router-link>
             </li>
             <li class="last">
               <router-link to="/tags">
-                <i class="mdi mdi-tag-multiple-outline" /> 标签
+                <i class="iconfont icon-biaoqian" /> 标签
               </router-link>
             </li>
           </ul>
         </div>
         <div class="menus-item">
           <a href="" class="menu-btn">
-            <i class="mdi mdi-gamepad-outline" />娱乐<i
-              class="mdi mdi-chevron-up"
+            <i class="iconfont icon-yule" />娱乐<i
+              class="iconfont icon-expand"
             />
           </a>
           <ul class="menus-submenu">
             <li class="first">
               <router-link to="/albums">
-                <i class="mdi mdi-camera" /> 相册
+                <i class="iconfont icon-xiangce" /> 相册
               </router-link>
             </li>
             <li class="last">
@@ -104,7 +104,7 @@
         </div> -->
         <div class="menus-item">
           <router-link class="menu-btn" to="/message">
-            <i class="mdi mdi-message-badge-outline" />留言
+            <i class="iconfont icon-liuyan" />留言
           </router-link>
         </div>
         <div class="menus-item">
@@ -113,7 +113,7 @@
             @click="openLogin"
             class="menu-btn"
           >
-            <i class="mdi mdi-login" />登录
+            <i class="iconfont icon-denglu" />登录
           </a>
           <template v-else>
             <img
@@ -125,11 +125,11 @@
             <ul class="menus-submenu">
               <li>
                 <router-link to="/user">
-                  <i class="mdi mdi-account" /> 个人中心
+                  <i class="iconfont icon-gerenzhongxin" /> 个人中心
                 </router-link>
               </li>
               <li>
-                <a @click="logout"><i class="mdi mdi-location-exit" /> 退出</a>
+                <a @click="logout"><i class="iconfont icon-tuichu" /> 退出</a>
               </li>
             </ul>
           </template>
@@ -152,16 +152,16 @@ export default {
       isDown: "",
       top: 430,
       scrollDown: true,
-      themeClass: "mdi-weather-sunny",
+      themeClass: "icon-night",
     };
   },
   methods: {
     changeTheme() {
       this.$store.commit("switchTheme");
       if (this.isDark) {
-        this.themeClass = "mdi-weather-night";
+        this.themeClass = "icon-sun";
       } else {
-        this.themeClass = "mdi-weather-sunny";
+        this.themeClass = "icon-night";
       }
     },
     openDrawer() {
@@ -325,7 +325,6 @@ header {
     &:hover .menus-submenu {
       display: block;
     }
-
     .user-avatar {
       cursor: pointer;
       // border-radius: 50%;

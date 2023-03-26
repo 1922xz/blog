@@ -74,22 +74,20 @@ const updateMenu = async (req, res) => {
     })
 }
 const getUserMenus=async (req,res)=>{
-    console.log(req.data,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-    let id=await userDao.getUserInfoId(req.data.data.name).then(resp=>resp[0].userInfoId)
-    console.log(id);
+    
+    
+    if(!req.user.name){
+        return res.send('未输入用户名')
+    }
+    let id=await userDao.getUserInfoId(req.user.name).then(resp=>resp[0].userInfoId)
+    console.log(id,'id');
     let menuIdList =await roleDao.getRoleId(id).then(async resp=>{
         let ids=await roleDao.getRoleMenuList(resp[0].roleId).then(idsresp => {
             return idsresp.map(e => e.id)
         })
         return ids
     })
-    // let menuIdList=await roleDao.getRoleMenuList(roleId).then(resp=>{
-    //     return resp.map(e=>e.id)
-    // })
-    // console.log(menuIdList);
     let menuInfo=await menuDao.getMenusById(...menuIdList)
-    // console.log(menuInfo);
-    // let data = menuInfo.filter(e => e.parentId == null && e.component == 'Layout')
     let data=[]
     for(let e of menuInfo){
         if (e.parentId == null && e.component != 'Layout'){
@@ -107,7 +105,6 @@ const getUserMenus=async (req,res)=>{
             data.push(e)
         }
     }
-    // console.log(data);
     menuInfo.forEach(e=>{
         if(e.parentId){
             data.forEach(i=>{
@@ -118,8 +115,6 @@ const getUserMenus=async (req,res)=>{
             })
         }
     })
-    // console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-    // console.log(data);
     res.cc(data)
     
 }

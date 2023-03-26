@@ -3,10 +3,10 @@ const articleDao = require('../dao/article.js')
 const categoryDao = require('../dao/category.js')
 const tagDao = require('../dao/tag.js')
 const getWebsiteConfig = async (req, res) => {
-    console.log(req.path,'path');
+    // console.log(req.path,'path');
     const data=await websiteDao.getWebsiteConfig().then(async (resp)=>{
         resp=resp[0]
-        console.log(resp);
+        // console.log(resp);
         let articleCount=await articleDao.getArtCount()
         let typeCount=await categoryDao.getCategoryCount()
         let tagCount=await tagDao.getCount()

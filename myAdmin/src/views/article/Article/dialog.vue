@@ -159,6 +159,7 @@
 </template>
 
 <script>
+import {addArticle} from '@/api/article'
 export default {
   data() {
     return {
@@ -203,7 +204,7 @@ export default {
   },
   methods: {
     saveOrUpdateArticle() {
-      console.log(123142);
+      // console.log(123142);
       this.addOrUpArt();
       this.$emit("cancelAutoSave");
       this.$refs["artAttrForm"].validate((valid) => {
@@ -214,7 +215,7 @@ export default {
       });
     },
     addOrUpArt(successmsg, errormsg) {
-      this.axios.post("/api/admin/articles", this.article).then(({ data }) => {
+      addArticle(this.article).then(( data) => {
         if (data.flag) {
           this.$notify.success({
             title: "成功",

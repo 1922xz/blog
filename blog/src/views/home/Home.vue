@@ -43,11 +43,10 @@
             <i color="#ff7242" class="iconfont icon-zhiding"/>置顶
           </span>
           <span>
-            <v-icon size="14">mdi-calendar-month-outline</v-icon
-            >{{ item.createTime | date }}
+            <i class="iconfont icon-calender"/>{{ item.createTime | date }}
           </span>
           <span v-if="item.categoryName">
-            <v-icon size="14" class="inbox">mdi-inbox-full</v-icon>
+            <i class="iconfont icon-mulu"/>
             {{ item.categoryName }}
           </span>
         </div>
@@ -69,7 +68,7 @@
             v-for="tag of item.tagDTOList"
             :key="tag.id"
           >
-            <v-icon size="14">mdi-tag-multiple</v-icon>{{ tag.tagName }}
+            <i class="iconfont icon-biaoqian"/>{{ tag.tagName }}
           </router-link>
         </div>
         <a href="#" class="more"> more... </a>

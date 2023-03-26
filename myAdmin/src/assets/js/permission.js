@@ -11,6 +11,7 @@ NProgress.configure({
     minimum: 0.3 // 初始化时的最小百分比
 })
 router.beforeEach((to, from, next) => {
+   
     NProgress.start()
     let token = localStorage.getItem('token')
     // console.log(token)
@@ -25,8 +26,15 @@ router.beforeEach((to, from, next) => {
             next(`/login?redirect=${to.path}`)
         }
     } else {
+        console.log(token)
+        console.log(to, 'to')
         if (token) {
-            next('/')
+            if (store.state.userMenuList.length) {
+                next('/')
+            } else {
+                console.log(123)
+                generaMenu(() => { next('/') })
+            }
         } else {
             next()
         }

@@ -47,8 +47,10 @@ const register = async (req, res) => {
 }
 const login = async (req, res) => {
     const user = req.fields
-    console.log('前端登录信息',user);
+    // console.log('前端登录信息',user);
+    // 获取用户名和密码
     const result = await registerDao.getPassword(user.username)
+    // 密码解密
     const compareResult = bcrypt.compareSync(user.password, result[0] ? result[0].password : "")
     if (!compareResult) {
         return res.status(202).send({
@@ -58,9 +60,8 @@ const login = async (req, res) => {
         })
     }
     // console.log(user);
+    // 密码正确获取用户信息
     const userinfo = await registerDao.getUserInfo(user.username)
-    // console.log(userinfo);
-    // console.log('login');
     // 开始生成token
     const token = await verify.setToken(user.username)
     res.status(200).send({

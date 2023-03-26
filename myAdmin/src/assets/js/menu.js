@@ -5,6 +5,7 @@ import {getUserMenus} from '@/api/menu.js'
 export async function generaMenu(callback) {
     let userMenuList =await getUserMenus()
     if(userMenuList.length){
+        console.log(userMenuList)
         userMenuList.forEach(item => {
             if (item.icon) {
                 item.icon = "iconfont " + item.icon;
@@ -24,6 +25,8 @@ export async function generaMenu(callback) {
         store.commit("saveUserMenuList", userMenuList)
         router.$addRoutes(userMenuList)
         callback()
+    }else{
+        console.log(userMenuList)
     }
     
 }

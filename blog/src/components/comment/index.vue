@@ -87,7 +87,7 @@
 import Reply from "./Reply.vue";
 import userInfo from "./userInfo.vue";
 import paging from "../common/paging.vue";
-import { getReplyById,getComments } from "@/api/comment.js";
+import { getReplyById, getComments } from "@/api/comment.js";
 export default {
   components: { userInfo, Reply, paging },
   props: {
@@ -132,10 +132,8 @@ export default {
         id: item.id,
         current: 1,
       };
-      getReplyById({
-        params,
-      }).then(({ replyCommentList }) => {
-        console.log('得到回鹘啦',replyCommentList);
+      getReplyById(params).then(({ replyCommentList }) => {
+        console.log("得到回鹘啦", replyCommentList);
         this.commentList[index].replyComment = replyCommentList;
         this.$refs.check[index].style.display = "none";
         // console.log(this.$refs.paging[index]);
@@ -158,17 +156,16 @@ export default {
       if (this.type == 1 || this.type == 3) {
         param.topicId = arr[2];
       }
-      getComments(param)
-        .then(({ commentList, count }) => {
-          console.log(commentList,this.current);
-          if (this.current == 1) {
-            this.commentList = commentList;
-            this.count = count;
-          } else {
-            this.commentList.push(...commentList);
-          }
-          this.current++;
-        });
+      getComments(param).then(({ commentList, count }) => {
+        console.log(commentList, this.current);
+        if (this.current == 1) {
+          this.commentList = commentList;
+          this.count = count;
+        } else {
+          this.commentList.push(...commentList);
+        }
+        this.current++;
+      });
     },
   },
   computed: {

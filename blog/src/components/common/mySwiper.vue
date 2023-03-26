@@ -1,5 +1,6 @@
 <template>
     <ul class="imglist">
+      <li class="img"></li>
       <!-- <li class="item" 
       v-for="(img, index) in imglist" :key="index" 
       :style="{backgroundImage:'url('+img+')'}">
@@ -19,6 +20,14 @@ export default {
 };
 </script>
 <style scoped >
+.img{
+  z-index: -999;
+  background-image: url("../../assets/img/swiper/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  inset: 0px;
+}
 .imglist {
  /* width: 100vw; */
  /* height: 50vh; */

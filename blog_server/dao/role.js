@@ -20,6 +20,11 @@ const getRoleId=(id)=>{
     const sql='select roleId from tb_user_role where userId='+id
     return db.execute(sql)
 }
+const getRoleById=(id)=>{
+    console.log(id,'roleid')
+    const sql="select roleLabel from tb_role where id="+id
+    return db.execute(sql)
+}
 const addMenus = (args) => {
     // console.log(args);
     const sql = 'insert into  tb_role_menu SET?'
@@ -32,5 +37,6 @@ module.exports={
     getMenuIdList,
     getMenuIdList,
     addMenus,
-    getRoleId
+    getRoleId,
+    getRoleById
 }

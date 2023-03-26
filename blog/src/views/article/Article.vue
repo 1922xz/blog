@@ -112,7 +112,7 @@
           <div class="article-reward">
             <!-- 点赞按钮 -->
             <a :class="isLike">
-              <v-icon size="14" color="var(--grey-0)">mdi-thumb-up</v-icon>
+              <i class="iconfont icon-thumb" style="clolr:var(--grey-0)"></i>
               <span v-show="article.likeCount > 0">{{
                 article.likeCount
               }}</span>
@@ -184,7 +184,7 @@
             v-if="article.recommendArticleList.length"
           >
             <div class="recommend-title">
-              <v-icon size="20">mdi-thumb-up</v-icon>相关推荐
+              <i class="iconfont icon-thumb"></i>&nbsp;相关推荐
             </div>
             <div class="recommend-list">
               <div
@@ -196,9 +196,8 @@
                   <img :src="item.articleCover" class="recommend-cover" />
                   <div class="recommend-info">
                     <div class="recommend-date">
-                      <v-icon size="14"
-                        >mdi-calendar-month-outline</v-icon
-                      >
+                      <i class="iconfont icon-calender"
+                        />
                       {{ item.createTime | date }}
                     </div>
                     <div>{{ item.articleTitle }}</div>
@@ -228,7 +227,7 @@ export default {
     this.getArticle();
   },
   mounted() {
-    console.log(this.$refs.article);
+    // console.log(this.$refs.article);
   },
   data() {
     return {
@@ -315,9 +314,6 @@ export default {
 </script>
 
 <style lang="scss">
-.expandAll .mdi-arrow-expand::before {
-  content: "\F0615" !important;
-}
 .theme--light.v-application .hljs code {
   background-color: transparent;
 }
@@ -471,7 +467,7 @@ hr {
   font-size: 14px;
   line-height: 1.9;
   .article-category a {
-    color: var(--grey-0);
+    color: #fff;
   }
 }
 .article-container {

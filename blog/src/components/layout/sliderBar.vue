@@ -3,13 +3,13 @@
   <div class="animated zoomIn mt-5 d-md-block d-none sidebar">
     <ul class="tab" v-if="showTab">
       <li class="item" :class="contents" @click="switchTab('contents')">
-        <i class="mdi mdi-format-list-bulleted" /><span>文章目录</span>
+        <i class="iconfont icon-mulu" />&nbsp;<span>文章目录</span>
       </li>
       <li class="item" :class="related" @click="switchTab('related')">
-        <i class="mdi mdi-family-tree" /><span>系列文章</span>
+        <i class="iconfont icon-tree" />&nbsp;<span>系列文章</span>
       </li>
       <li class="item" :class="overview" @click="switchTab('overview')">
-        <i class="mdi mdi-home-account" /><span>站点概述</span>
+        <i class="iconfont icon-chengbao" />&nbsp;<span>站点概述</span>
       </li>
     </ul>
     <div v-show="overview">
@@ -80,8 +80,7 @@
       </ul>
       <!-- 收藏按钮 -->
       <a class="collection-btn">
-        <v-icon color="var(--grey-0)" size="18" class="mr-1">mdi-bookmark</v-icon
-        >加入书签
+        <i class="mr-1 iconfont icon-shuqian" style="margin-top:3px"/>加入书签
       </a>
       <!-- 社交信息 -->
       <div class="card-info-social">
@@ -90,15 +89,14 @@
         <a target="_blank" class="iconfont icon-gitee" />
       </div>
       <div class="web-info-title">
-        <v-icon size="18" class="ad">mdi-bell</v-icon>
-        公告
+        <i class="iconfont icon-bell ad"/>&nbsp;公告
       </div>
       <div style="font-size: 0.875rem">
         {{ blogInfo.websiteNotice }}
         网站通告
       </div>
       <div class="web-info-title">
-        <v-icon size="18">mdi-chart-line</v-icon>
+        <i class="iconfont icon-chart-line"></i>
         网站资讯
       </div>
       <div class="web-info">
@@ -129,8 +127,8 @@
     <div v-show="contents">
       <!-- 文章目录 -->
       <div class="right-title right-container">
-        <i class="iconfont icon-fenlei" style="font-size: 16.8px" />
-        <span style="margin-left: 10px">目录</span>
+        <i class="iconfont icon-fenlei" style="font-size: 16.8px;color:var(--grey-5)" />
+        <span style="margin-left: 10px;color:var(--grey-5)">目录</span>
       </div>
       <div id="toc" />
     </div>
@@ -196,6 +194,11 @@ export default {
         if (val.path.split("/").indexOf("articles") != -1) {
           this.contents = "active";
           this.overview = "";
+          this.related = "";
+        }else{
+          this.related = "";
+          this.contents=""
+          this.overview="active"
         }
       },
       // 深度观察监听
@@ -215,7 +218,7 @@ export default {
   max-height: 98vh;
   overflow-y: scroll;
   line-height: 2;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.1rem;
   top: 0px;
   position: relative;
   right: 75px;
@@ -231,11 +234,12 @@ export default {
   .tab {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 110%;
     padding: 1.875rem 0 0.625rem;
     margin: 0;
     min-height: 1.875rem;
     li {
+      // margin-right: 10px;
       cursor: pointer;
       display: inline-flex;
       font-size: 0.875em;
@@ -248,6 +252,9 @@ export default {
       transition: all 0.2s ease-out 0s;
       span {
         display: none;
+      }
+      i{
+        margin-top: -2px;
       }
     }
     li.active {

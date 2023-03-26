@@ -30,6 +30,9 @@ const getArticleListById = async (req, res) => {
     const lastArticle = await articleDao.getLastArticle(id);   // 找到上一篇文章
     const nextArticle = await articleDao.getNextArticle(id);   // 找到下一篇文章
     const article = await articleDao.getArticleListById(id);   // 根据id找这篇文章
+    if(!article[0]){
+        return res.send({})
+    }
     const categoryName = await categoryDao.getCategoryByArticle(article[0]);     // 找到该文章分类名称
     const recommendArticleList = await articleDao.getRecommendArticleByArt(article[0]);     // 找到推荐文章
     const newestArticleList = await articleDao.getNewistArticle();     // 找到最新文章

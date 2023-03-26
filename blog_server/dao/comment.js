@@ -1,6 +1,6 @@
 const db = require('../db/index.js')
 const addComment = (comment) => {
-    console.log(comment);
+    // console.log(comment);
     const sql = 'insert into tb_comment SET ?'
     return db.execute(sql, comment)
 }

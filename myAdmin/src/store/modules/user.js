@@ -12,10 +12,9 @@ export default {
 
     },
     mutations: {
-        logout(state,){
+        logout(state){
             state.token="",
-            localStorage.clear()
-            
+            localStorage.removeItem("token")
         },
         login(state, data) {
             state.token = data.token;

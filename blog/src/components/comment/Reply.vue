@@ -29,6 +29,7 @@
 <script>
 import Emoji from "./Emoji";
 import EmojiList from "../../assets/js/emoji";
+import {addComment} from "@/api/comment"
 export default {
   components: {
     Emoji,
@@ -59,7 +60,7 @@ export default {
     },
     insertReply() {
       //判断登录
-      if (!this.$store.state.userId) {
+      if (!this.$store.state.user.userId) {
         this.$store.state.user.loginFlag = true;
         return false;
       }
@@ -83,7 +84,7 @@ export default {
         replyUserId: this.replyUserId,
         parentId: this.parentId,
         commentContent: this.commentContent,
-        userId:this.$store.state.userId
+        userId:this.$store.state.user.userId
       };
       // console.log(comment);
       switch (this.type) {
@@ -94,7 +95,8 @@ export default {
         default:
           break;
       }
-      this.axios.post("http://localhost:3008/api/comments", comment).then(data => {
+      addComment(comment).then(data => {
+        console.log(data)
         if (data.flag) {
           this.$bus.$emit("getComments", this.index);
           this.$toast({ type: "success", message: "回复成功" });
